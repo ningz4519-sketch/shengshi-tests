@@ -175,27 +175,11 @@
       .pattern-row .p-name { font-weight: 800; }
       .pattern-row .p-desc { color: var(--ink-soft); font-size: 13px; }
 
-      /* ---------- deep read ---------- */
+      /* ---------- free ending ---------- */
       .deep { background: var(--deep-bg); color: var(--deep-ink); border-radius: 24px; padding: 26px 20px 24px; margin-top: 26px; box-shadow: var(--shadow); }
       .deep .deep-tag { display: inline-block; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .15em; border-radius: 999px; padding: 4px 12px; margin-bottom: 12px; }
       .deep h2 { font-size: 24px; margin: 0 0 6px; line-height: 1.35; }
       .deep .deep-sub { color: var(--deep-soft); font-size: 14.5px; margin: 0 0 18px; }
-      .deep ul.chapters { list-style: none; margin: 0 0 20px; padding: 0; }
-      .deep ul.chapters li { display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px dashed rgba(246, 239, 227, .18); font-size: 15px; }
-      .deep ul.chapters li:last-child { border-bottom: none; }
-      .deep ul.chapters svg { flex: none; margin-top: 3px; }
-      .deep ul.chapters small { display: block; color: var(--deep-soft); font-size: 13px; }
-      .price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
-      .price { font-size: 34px; font-weight: 800; color: #ffc46b; }
-      .price-note { color: var(--deep-soft); font-size: 13px; }
-      .code-box { display: flex; gap: 10px; align-items: stretch; margin-bottom: 16px; }
-      .code-text { flex: 1; background: rgba(255, 255, 255, .08); border: 1px dashed rgba(246, 239, 227, .4); border-radius: 12px; padding: 12px 14px; font-size: 15px; display: flex; align-items: center; word-break: break-all; }
-      .btn-copy { background: #ffc46b; color: #33270a; border: none; border-radius: 12px; font-weight: 700; font-size: 15px; padding: 0 20px; cursor: pointer; font-family: inherit; min-height: 48px; flex: none; }
-      .btn-copy:active { transform: scale(.97); }
-      .steps { counter-reset: step; margin: 0; padding: 0; list-style: none; font-size: 14.5px; color: var(--deep-ink); }
-      .steps li { display: flex; gap: 10px; margin-bottom: 8px; }
-      .steps .n { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px; }
-      .deep .deep-fine { color: var(--deep-soft); font-size: 12.5px; margin-top: 14px; }
 
       /* ---------- atlas ---------- */
       .atlas { margin-top: 44px; }
@@ -233,10 +217,11 @@
           <span class="fact">命宫主星速读</span>
           <span class="fact">当前大限</span>
           <span class="fact">格局识别</span>
+          <span class="fact">全程免费</span>
         </div>
         <div class="form-card">
           <div class="field">
-            <label for="in-date">出生日期<small>公历 · 深度解读数据覆盖 1950–2026 年出生</small></label>
+            <label for="in-date">出生日期<small>公历 · 本页可排 1950–2026 年出生的命盘</small></label>
             <input type="date" id="in-date" min="1950-01-01" max="2026-12-31" />
           </div>
           <div class="field">
@@ -300,48 +285,12 @@
           </div>
         </div>
 
-        <!-- 深度解读（付费） -->
-        <div class="deep" id="deep-panel">
-          <span class="deep-tag">深度解读</span>
-          <h2 class="display">这张盘，还有<span id="deep-count">13 个维度</span>没展开</h2>
-          <p class="deep-sub">免费结果只说了命宫和大限。下面这份是按你这张盘单独写的完整报告：</p>
-          <ul class="chapters">
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="#ffc46b"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffc46b" stroke-width="2.4"/></svg>
-              <div>命格总览<small>这张盘一生的基调与关键转折</small></div>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="#ffc46b"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffc46b" stroke-width="2.4"/></svg>
-              <div>性格与天赋<small>命宫主星的另一面，你的强项与盲区</small></div>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="#ffc46b"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffc46b" stroke-width="2.4"/></svg>
-              <div>感情与婚姻<small>夫妻宫、子女宫与桃花线合看</small></div>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="#ffc46b"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffc46b" stroke-width="2.4"/></svg>
-              <div>事业与财运<small>官禄宫、财帛宫、田宅宫合看</small></div>
-            </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2" fill="#ffc46b"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="#ffc46b" stroke-width="2.4"/></svg>
-              <div>健康与提醒<small>疾厄宫、福德宫与需要注意的年份</small></div>
-            </li>
-          </ul>
-          <div class="price-row">
-            <span class="price">¥1.99</span>
-            <span class="price-note">一次解锁 · 13 维完整报告 · 私信发送</span>
-          </div>
-          <div class="code-box">
-            <div class="code-text" id="deep-code"></div>
-            <button class="btn-copy" id="btn-copy-code" type="button">复制暗号</button>
-          </div>
-          <ol class="steps">
-            <li><span class="n">1</span><span>复制上面的暗号</span></li>
-            <li><span class="n">2</span><span>打开小红书，私信「省事研究所」</span></li>
-            <li><span class="n">3</span><span>粘贴暗号发送，按私信里的指引付款，24 小时内收到你的专属深度报告</span></li>
-          </ol>
-          <p class="deep-fine">付款与报告发送都在小红书私信内完成，这个页面不收款、不收集任何信息。</p>
-          <p class="toast" id="code-toast" role="status"></p>
+        <!-- 免费收尾 -->
+        <div class="deep" id="free-panel">
+          <span class="deep-tag">全程免费</span>
+          <h2 class="display">你的完整命盘，就在上面</h2>
+          <p class="deep-sub">本测试是传统文化免费体验：十二宫命盘、命宫速读、四化落宫、当前大限和格局都已经完整写在上方结果里，没有藏起来的部分，也不用付任何费用。</p>
+          <p class="deep-sub" style="margin-bottom:0">想看更多免费测试，可以关注小红书「省事研究所」。</p>
         </div>
       </section>
 
@@ -356,7 +305,7 @@
       <footer>
         本测试为传统命理文化娱乐内容，结果仅供参考，不构成任何人生、健康或投资建议。<br />
         排盘引擎与解读数据来源：<a href="https://github.com/Renhuai123/ziwei-doushu" target="_blank" rel="noopener">Renhuai123/ziwei-doushu</a>（紫微斗数开源解读数据集 v4.0），作者：王多鱼AI。<br />
-        「省事研究所」出品 · 深度解读为付费内容，在小红书私信内完成付款与交付。
+        「省事研究所」出品 · 本测试全程免费。
       </footer>
     </main>
 
@@ -403,7 +352,7 @@ lunar-javascript/lunar.js:
   var GRID_BRANCHES = [5, 6, 7, 8, 4, 'C', 9, 3, 'C', 10, 2, 1, 0, 11];
 
   var $ = function (id) { return document.getElementById(id); };
-  var state = { chart: null, input: null, code: '' };
+  var state = { chart: null, input: null };
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -634,12 +583,6 @@ lunar-javascript/lunar.js:
       ? '命宫' + majors.map(function (s) { return s.name; }).join('、') + '坐命，' + (summary.nature || '') + '，' + kws.slice(0, 3).join('、') + '。'
       : '命宫空宫，借对宫来看，可塑性更强。';
     $('r-match').innerHTML = '一句话：<b>' + esc(oneLine) + '</b>';
-
-    /* 深读暗号 = 数据集记录键：公历日期-时辰序号-性别 */
-    var code = '紫微深读 ' + input.chartDate + '-' + input.hourIndex + '-' + input.gender;
-    state.code = code;
-    $('deep-code').textContent = '「' + code + '」';
-    $('deep-count').textContent = '13 个维度';
   }
 
   /* ---------- 复制 ---------- */
@@ -662,10 +605,6 @@ lunar-javascript/lunar.js:
     done();
   }
 
-  $('btn-copy-code').addEventListener('click', function () {
-    copyText(state.code, $('code-toast'), '暗号已复制，去小红书私信粘贴吧');
-  });
-
   $('btn-share').addEventListener('click', function () {
     var chart = state.chart, input = state.input;
     if (!chart) return;
@@ -676,8 +615,7 @@ lunar-javascript/lunar.js:
       '命宫：' + (majors.length ? majors.map(function (s) { return s.name + (s.brightnessRaw ? '（' + s.brightnessRaw + '）' : ''); }).join('、') : '空宫') +
       ' · ' + chart.wuxingJuName + '\n' +
       '命主：' + (chart.mingZhu || '') + ' · 身主：' + (chart.shenZhu || '') + '\n' +
-      '暗号：' + state.code + '\n' +
-      '测测你的命盘：私信「省事研究所」发「紫微测试」';
+      '测测你的命盘：关注小红书「省事研究所」，还有更多免费测试';
     copyText(text, $('share-toast'), '已复制，去评论区对号入座吧');
   });
 
